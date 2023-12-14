@@ -1,7 +1,8 @@
 public class CantarMusica {
-    // Método que imprime o primeiro trecho da música de acordo com os argumentos que serão usados
+    // Método que imprime o primeiro trecho da música de acordo com os parâmetros que serão usados
     public void imprimirPrimeiroTrecho(boolean imprimirPorIsso, int repetir) {
-        // Condicional que imprime "Por isso...!" caso a variável imprimirPorIsso seja verdadeira, senão, imprime nada
+        // Expressão ternária que imprime "Por isso...!" caso o parâmetro imprimirPorIsso seja verdadeira,
+        // senão, imprime uma String vazia
         System.out.println(imprimirPorIsso ? "Por isso...!" : "");
         // Loop que imprime essa estrofe repetidas vezes, com base no valor fornecido pelo parâmetro repetir
         for (int i = 0; i < repetir; i++) {
@@ -55,8 +56,8 @@ public class CantarMusica {
             System.out.println("Louvemos ao senhor\n");
         }
 
-        // Condicional que imprime "Braço direito, braço esquerdo" caso a variável imprimirBracos seja verdadeira,
-        // senão, imprime nada
+        // Expressão ternária que imprime "Braço direito, braço esquerdo" caso o parâmetro imprimirBracos seja verdadeira,
+        // senão, imprime uma String vazia
         System.out.print(imprimirBracos ? "Braço direito, braço esquerdo\n\n" : "");
     }
 
@@ -75,7 +76,7 @@ public class CantarMusica {
         String verso = """
                 Braço direito, braço esquerdo
                 Perna direita, perna esquerda""";
-        // Condicional que imprime o verso com quebra de linha caso o parâmetro ehQuebraDeLinha seja verdadeira
+        // Expressão ternária que imprime o verso com quebra de linha caso o parâmetro ehQuebraDeLinha seja verdadeira
         // senão, imprime sem quebra de linha
         System.out.println(ehQuebraDeLinha ? verso +"\n": verso);
     }
@@ -94,7 +95,7 @@ public class CantarMusica {
 
     // Método que imprime o nono trecho da música
     public void imprimirNonoTrecho(boolean ehAbraco) {
-        // Condicional que imprime "Dá um pulinho e abraça o irmão" caso o parâmetro ehAbraco seja verdadeira,
+        // Expressão ternária que imprime "Dá um pulinho e abraça o irmão" caso o parâmetro ehAbraco seja verdadeira,
         // senão, imprime "Dá um pulinho"
         System.out.println(ehAbraco ? "Dá um pulinho e abraça o irmão\n" : "Dá um pulinho\n");
     }
