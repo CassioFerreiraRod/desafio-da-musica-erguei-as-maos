@@ -1,7 +1,7 @@
 public class CantarMusica {
     // Método que imprime o primeiro trecho da música de acordo com os argumentos que serão usados
     public void imprimirPrimeiroTrecho(boolean imprimirPorIsso, int repetir) {
-        // Condicional que imprime "Por isso...!" caso a variável ehPorIsso seja verdadeira, senão, imprime nada
+        // Condicional que imprime "Por isso...!" caso a variável imprimirPorIsso seja verdadeira, senão, imprime nada
         System.out.println(imprimirPorIsso ? "Por isso...!" : "");
         // Loop que imprime essa estrofe repetidas vezes, com base no valor fornecido pelo parâmetro repetir
         for (int i = 0; i < repetir; i++) {
