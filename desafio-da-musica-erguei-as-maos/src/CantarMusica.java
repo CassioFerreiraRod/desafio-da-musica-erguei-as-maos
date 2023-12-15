@@ -6,7 +6,7 @@ public class CantarMusica {
         System.out.println(imprimirPorIsso ? "Por isso...!" : "");
         // Loop que imprime essa estrofe repetidas vezes, com base no valor fornecido pelo parâmetro repetir
         for (int i = 0; i < repetir; i++) {
-          // Loop que imprime o verso 'Erguei as mãos e dai glória a Deus' repetidas vezes, com base no valor fornecido
+          // Loop que imprime 2 vezes o verso
             for (int j = 0; j < 2; j++) {
                 System.out.println("Erguei as mãos e dai glória a Deus");
             }
