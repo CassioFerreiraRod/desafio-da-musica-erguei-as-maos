@@ -34,10 +34,10 @@ public class CantarMusica {
 
     // Método que imprime o segundo trecho da música
     public void imprimirSegundoTrecho() {
-        // Adicionando animais as as ArraysList
-        primeirosAnimais.add("elefante");
+        // Adicionando animais as ArraysList
+        primeirosAnimais.add("elefantes");
         primeirosAnimais.add("minhoquinha");
-        primeirosAnimais.add("canguru");
+        primeirosAnimais.add("cangurus");
         segundosAnimais.add("passarinhos");
         segundosAnimais.add("pinguins");
         segundosAnimais.add("sapinho");
@@ -51,8 +51,10 @@ public class CantarMusica {
             // imprime o artigo feminino "A" antes do nome do animal
             if (primeirosAnimais.get(i).endsWith("a"))
                 System.out.printf("A %s\n", primeirosAnimais.get(i));
-            else if (primeirosAnimais.get(1).endsWith("as"))
+            else if (primeirosAnimais.get(i).endsWith("as"))
                 System.out.printf("As %s\n", primeirosAnimais.get(i));
+            else if (primeirosAnimais.get(i).endsWith("s"))
+                System.out.printf("Os %s\n", primeirosAnimais.get(i));
             else
                 System.out.printf("O %s\n", primeirosAnimais.get(i));
             // Verifica se o nome do animal no array segundosAnimais termina com a letra "s" e, se sim,
