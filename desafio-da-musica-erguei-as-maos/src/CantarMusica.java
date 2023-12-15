@@ -1,4 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class CantarMusica {
+    List<String> primeirosAnimais = new ArrayList<>();
+    List<String> segundosAnimais = new ArrayList<>();
+
+    // Método que adiciona Animais a ArrayList primeirosAnimais
+    public void adicionarPrimeiroAnimal(String animal) {
+        primeirosAnimais.add(animal);
+    }
+
+    // Método que adiciona Animais a ArrayList segundosAnimais
+    public void adicionarSegundoAnimal(String animal) {
+        segundosAnimais.add(animal);
+    }
+
+
     // Método que imprime o primeiro trecho da música de acordo com os parâmetros que serão usados
     public void imprimirPrimeiroTrecho(boolean imprimirPorIsso, int repetir) {
         // Expressão ternária que imprime "Por isso...!" caso o parâmetro imprimirPorIsso seja verdadeira,
@@ -6,7 +23,7 @@ public class CantarMusica {
         System.out.println(imprimirPorIsso ? "Por isso...!" : "");
         // Loop que imprime essa estrofe repetidas vezes, com base no valor fornecido pelo parâmetro repetir
         for (int i = 0; i < repetir; i++) {
-          // Loop que imprime 2 vezes o verso
+            // Loop que imprime 2 vezes o verso
             for (int j = 0; j < 2; j++) {
                 System.out.println("Erguei as mãos e dai glória a Deus");
             }
@@ -17,18 +34,39 @@ public class CantarMusica {
 
     // Método que imprime o segundo trecho da música
     public void imprimirSegundoTrecho() {
-        // Criando array para salvar o nome do animais
-        String[] primeirosAnimais = {"elefante", "minhoquinha", "canguru"};
-        String[] segundosAnimais = {"passarinhos", "pinguins", "sapinho"};
+        // Adicionando animais as as ArraysList
+        primeirosAnimais.add("elefante");
+        primeirosAnimais.add("minhoquinha");
+        primeirosAnimais.add("canguru");
+        segundosAnimais.add("passarinhos");
+        segundosAnimais.add("pinguins");
+        segundosAnimais.add("sapinho");
         // Loop que verifica cada posição até o tamanho dos arrays e imprime a estrofe
-        for (int i = 0; i < primeirosAnimais.length; i++) {
+        for (int i = 0; i < primeirosAnimais.size(); i++) {
             // Loop que imprime 2 vezes o verso
             for (int j = 0; j < 2; j++) {
                 System.out.println("Os animaizinhos subiram de dois em dois");
             }
-            // Imprime o verso de acordo com a posição das array
-            System.out.printf("O %s\n", primeirosAnimais[i]);
-            System.out.printf("E os %s, como os filhos do Senhor\n\n", segundosAnimais[i]);
+            // Verifica se o nome do animal no array primeirosAnimais termina com a letra "a" e, se sim,
+            // imprime o artigo feminino "A" antes do nome do animal
+            if (primeirosAnimais.get(i).endsWith("a"))
+                System.out.printf("A %s\n", primeirosAnimais.get(i));
+            else if (primeirosAnimais.get(1).endsWith("as"))
+                System.out.printf("As %s\n", primeirosAnimais.get(i));
+            else
+                System.out.printf("O %s\n", primeirosAnimais.get(i));
+            // Verifica se o nome do animal no array segundosAnimais termina com a letra "s" e, se sim,
+            // imprime o artigo no plural
+            if (segundosAnimais.get(i).endsWith("os"))
+                System.out.printf("E os %s, como os filhos do Senhor\n\n", segundosAnimais.get(i));
+            else if (segundosAnimais.get(i).endsWith("as"))
+                System.out.printf("E as %s, como os filhos do Senhor\n\n", segundosAnimais.get(i));
+            else if (segundosAnimais.get(i).endsWith("a"))
+                System.out.printf("E a %s, como os filhos do Senhor\n\n", segundosAnimais.get(i));
+            else if (segundosAnimais.get(i).endsWith("s"))
+                System.out.printf("E os %s, como os filhos do Senhor\n\n", segundosAnimais.get(i));
+            else
+                System.out.printf("E o %s, como os filhos do Senhor\n\n", segundosAnimais.get(i));
         }
     }
 
@@ -78,7 +116,7 @@ public class CantarMusica {
                 Perna direita, perna esquerda""";
         // Expressão ternária que imprime o verso com quebra de linha caso o parâmetro ehQuebraDeLinha seja verdadeira
         // senão, imprime sem quebra de linha
-        System.out.println(ehQuebraDeLinha ? verso +"\n": verso);
+        System.out.println(ehQuebraDeLinha ? verso + "\n" : verso);
     }
 
     // Método que imprime o sétimo trecho da música
